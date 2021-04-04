@@ -30,5 +30,6 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
     }
 
     override fun onItemClick(view: View, position: Int) {
+        Toast.makeText(this,"クリックされました",Toast.LENGTH_SHORT).show()
     }
 }
