@@ -1,0 +1,8 @@
+{
+  "status": "ok",
+  "allCount": "1000",
+  "data": [
+    { "id": "Dx18", "maxCount": "20", "count": "12" },
+    { "id": "Ex12", "maxCount": "45", "count": "32" }
+  ]
+}
