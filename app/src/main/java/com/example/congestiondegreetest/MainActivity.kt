@@ -13,12 +13,19 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
 
+    private val url : String = "https://script.google.com/macros/s/AKfycbwAGmpDO_mcI05IC8d6y39Eyu1ndIMUHMSsx1zAqFJnthVgXz77PuRXfq0qW4d9LtPkOA/exec"
+    private val jsonMessage: String = "{\"function\": \"init\"}"
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var jsonReader : GetInformation = GetInformationGAS(0,textView_grossPeople,RecyclerView_main,this)
-        jsonReader.getJson(this)
+        var gThread = GetInformationThread(url,jsonMessage)
+        gThread.start()
+        gThread.join()
+        textView_grossPeople.text = "校内合計来場者:${gThread.allCount}(人)"
+        RecyclerView_main.adapter = RecyclerAdapter(this, this, gThread.dataList)
+        RecyclerView_main.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         Log.i("INFORMATION","run")
     }
 

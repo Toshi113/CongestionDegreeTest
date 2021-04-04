@@ -21,6 +21,7 @@ import java.io.InputStreamReader
 import java.lang.Exception
 import java.util.*
 
+@Deprecated("use class:GetInformation() in  main thread instead.")
 class GetInformationGAS(override var allCount: Int, var textView: TextView, var recyclerView: RecyclerView,var context: Context) : GetInformation {
 
     private val urlGAS: String =

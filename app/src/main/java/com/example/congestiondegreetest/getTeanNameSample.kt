@@ -10,13 +10,6 @@ import java.util.ArrayList
 
 class GetTeamNameSample {
     companion object {
-        fun getTeamNameFromId(id: String): String {
-            return "仮の団体名"
-        }
-
-        fun getPlaceFromId(id: String): String {
-            return "仮の開催場所名"
-        }
 
         fun getTeamDataFromId(id: String,context: Context): ArrayList<String> {
             /**

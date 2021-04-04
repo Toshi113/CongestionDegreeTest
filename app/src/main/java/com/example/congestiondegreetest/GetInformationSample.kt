@@ -9,6 +9,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.lang.Exception
 
+@Deprecated("It is sample.So you can't use this class in practice.")
 class GetInformationSample(override var allCount: Int) : GetInformation {
 
     private var jsonPath:String = ""
