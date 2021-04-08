@@ -11,6 +11,7 @@ class RecyclerViewHolder(view:View) : RecyclerView.ViewHolder(view) {
 
     val teamNameTextView: TextView = view.findViewById(R.id.textView_teamName)
     val placeTextView: TextView = view.findViewById(R.id.textView_place)
-    val numberOfPeopleTextView: TextView = view.findViewById(R.id.textView_numberOfPeople)
     val percentageTextView: TextView = view.findViewById(R.id.textView_percentage)
+    val countTextView: TextView = view.findViewById(R.id.textView_count)
+    val maxCountTextView: TextView = view.findViewById(R.id.textView_maxCount)
 }

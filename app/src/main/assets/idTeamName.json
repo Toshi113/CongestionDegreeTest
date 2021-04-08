@@ -14,7 +14,7 @@
     {"id": "Dx12","teamName": "Seiko Disney Resort","place":"", "introduceMessage": "", "icoName": ""},
     {"id": "Dx13","teamName": "おさるのジョージ研究会","place":"", "introduceMessage": "", "icoName": ""},
     {"id": "Dx14","teamName": "魔女の卓球便","place":"", "introduceMessage": "", "icoName": ""},
-    {"id": "Dx15","teamName": "駅弁販売","place":"", "introduceMessage": "", "icoName": ""},
+    {"id": "Dx15","teamName": "駅弁販売","place":"駅弁の場所", "introduceMessage": "", "icoName": ""},
     {"id": "Dx16","teamName": "囲碁将棋部　聖光道場","place":"", "introduceMessage": "", "icoName": ""},
     {"id": "Dx17","teamName": "ぶいえいす","place":"", "introduceMessage": "", "icoName": ""},
     {"id": "Dx18","teamName": "数学研究会","place":"", "introduceMessage": "", "icoName": ""},

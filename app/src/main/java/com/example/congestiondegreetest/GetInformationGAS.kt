@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import okhttp3.MediaType
@@ -93,7 +94,7 @@ class GetInformationGAS(override var allCount: Int, var textView: TextView, var 
 
             textView.text = "校内合計来場者:${allCount}(人)"
             recyclerView.adapter = RecyclerAdapter(context, this, getAllData())
-            recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            recyclerView.layoutManager = GridLayoutManager(context,2)
         }
 
         override fun onItemClick(view: View, position: Int) {

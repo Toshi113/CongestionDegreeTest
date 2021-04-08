@@ -9,6 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
 
     //　1分*60秒/分*1000ミリ秒/秒
     private val interval : Long = 1 * 60 * 1000
+
+    private val horizontalCount = 2
 
     private var handler: Handler? = null
     private var runnable: Runnable? = null
@@ -56,7 +59,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
         gThread.join()
         textView_grossPeople.text = "校内合計来場者:${gThread.allCount}(人)"
         RecyclerView_main.adapter = RecyclerAdapter(this, this, gThread.dataList)
-        RecyclerView_main.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        RecyclerView_main.layoutManager = GridLayoutManager(this,horizontalCount)
         Log.i("INFORMATION","更新されました")
     }
 

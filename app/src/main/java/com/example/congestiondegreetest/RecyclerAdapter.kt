@@ -28,7 +28,8 @@ class RecyclerAdapter(private val context: Context, private val itemClickListene
             val list = GetTeamNameSample.getTeamDataFromId(itemList[position].id,context)
             it.teamNameTextView.text = list[0]
             it.placeTextView.text = list[1]
-            it.numberOfPeopleTextView.text = itemList[position].count.toString() + "/" + itemList[position].maxCount.toString() + "(人)"
+            it.countTextView.text = itemList[position].count.toString()
+            it.maxCountTextView.text = itemList[position].maxCount.toString() + "(人)"
             it.percentageTextView.text = (itemList[position].count * 100 / itemList[position].maxCount).toInt().toString() + "%"
         }
     }
